@@ -252,7 +252,7 @@ int main()
     printf("\n\nPress a key to start.");
     while (!kbhit());
 
-    for (int running = 1; running; running = !is_colliding(&field, &snake))
+    while (!is_colliding(&field, &snake))
     {
         system("cls");
         print_title(score);
@@ -270,7 +270,7 @@ int main()
 
     Sleep(1000);
 
-    printf("Press a key to close.");
+    printf("\n\tPress a key to close.");
     while (!kbhit());
 
     return 0;
